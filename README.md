@@ -15,7 +15,7 @@ Testing a POST request containing payment information with cURL:
 `curl -v -X POST -H "Content-type: application/json" -d '{"ccNumber":"1234567891","amount":13.5}' http://localhost:11080/bankFacade-war/banking/payment
 `
 
-![image](https://user-images.githubusercontent.com/19567048/58241537-762b1700-7d4d-11e9-8209-e25291bbf249.png)
+![image](https://user-images.githubusercontent.com/19567048/58241729-d3bf6380-7d4d-11e9-93b5-8489f6b5a2bb.png)
 
 ## Built With
 
