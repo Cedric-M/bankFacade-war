@@ -38,8 +38,8 @@ public class PaymentResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson() {
-        //TODO return proper representation object
-        throw new UnsupportedOperationException();
+        String restMsg="{\"message\":\"hello REST\"}";
+        return restMsg;
     }
 
     /**
