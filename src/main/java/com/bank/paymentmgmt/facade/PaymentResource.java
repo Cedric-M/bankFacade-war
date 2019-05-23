@@ -10,9 +10,11 @@ import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 /**
  * REST Web Service
@@ -22,32 +24,16 @@ import javax.ws.rs.core.MediaType;
 @Path("payment")
 public class PaymentResource {
 
-    @Context
-    private UriInfo context;
-
-    /**
-     * Creates a new instance of PaymentResource
-     */
-    public PaymentResource() {
-    }
-
-    /**
-     * Retrieves representation of an instance of com.bank.paymentmgmt.facade.PaymentResource
-     * @return an instance of java.lang.String
-     */
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public String getJson() {
-        String restMsg="{\"message\":\"hello REST\"}";
-        return restMsg;
-    }
-
-    /**
-     * PUT method for updating or creating an instance of PaymentResource
-     * @param content representation for the resource
-     */
-    @PUT
+    @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public void putJson(String content) {
+    public Response pay(String content) {
+    //affichage du corps de la requête POST.
+    System.out.println(content);
+    //retour d'une réponse sans corps indiquant un statut 202 : la requête 
+    //a été acceptée mais le processus n'est pas terminé
+    return Response.accepted().build();
+
+
     }
+    
 }
