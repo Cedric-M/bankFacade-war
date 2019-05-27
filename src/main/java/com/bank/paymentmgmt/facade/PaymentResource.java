@@ -22,6 +22,10 @@ import javax.ws.rs.core.Response;
  *
  * @author ced
  */
+
+@EJB
+private BankingServiceRemote bankingService;
+
 @RequestScoped
 @Path("payment")
 public class PaymentResource {
