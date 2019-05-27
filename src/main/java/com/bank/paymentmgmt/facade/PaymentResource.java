@@ -5,6 +5,7 @@
  */
 package com.bank.paymentmgmt.facade;
 
+import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
@@ -21,6 +22,7 @@ import javax.ws.rs.core.Response;
  *
  * @author ced
  */
+@RequestScoped
 @Path("payment")
 public class PaymentResource {
 
